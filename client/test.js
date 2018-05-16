@@ -1,12 +1,9 @@
-ReactDOM.render(<h1>こんにちわ</h1>, document.getElementById("root"));
-var wait = function(sec) {
-    return function() {
-      return new Promise(function(resolve/*, reject*/) {
-        setTimeout(resolve, sec*1000)
-      });
-    }
-  };
+const title ='sekizenkan';
+const img = "https://www.yadoran.jp/img/photo/m/a1/20/48/a120484ce9c7bdf7d44707ca2bc75ab6.jpg";
 
-  window.setTimeout(() => 
-    ReactDOM.render(<h1>やっぱいまのとりけし</h1>, document.getElementById("root"))
-    , 5000)
+const msg = 
+  <div>
+    <h1>{title}</h1>
+    <p><img src = {img}/></p>
+  </div>
+ReactDOM.render(msg, document.getElementById("root"));
